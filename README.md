@@ -1,6 +1,6 @@
 # Weather-Forecaster 🌤️
 
-A simple web application that shows real-time weather information for any city.
+A simple web-based weather forecasting application, It lets users enter a city or location and shows current weather information and a short forecast. The app pulls real weather data from a public API (like OpenWeatherMap), then displays temperature, humidity and Wind Speed in a responsive UI.
 
 Built using **Python (Flask)** and a public weather API, this project focuses on clean UI, API integration, and backend-frontend interaction.
 
@@ -46,6 +46,7 @@ Weather-Forecaster/
 ├── static/
   ├── css/
   └── js/
+```
 
 ---
 
@@ -55,12 +56,12 @@ https://weather-forecaster-y9pe.onrender.com
 ---
 
 ## Setup (Local)
-
 ```bash
 git clone https://github.com/vardhineeditharak/Weather-Forecaster.git
 cd Weather-Forecaster
 pip install -r requirements.txt
 python app.py
+```
 
 ## Create a .env file:
 API_KEY=your_weather_api_key
