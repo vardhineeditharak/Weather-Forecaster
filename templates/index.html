@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecaster</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="app-card">
+        <header>
+            <h1 class="brand-title">Weather Forecaster</h1>
+            <form method="POST" class="search-group">
+                <input type="text" name="city" placeholder="Enter city name..." required>
+                <button type="submit"><i data-lucide="search"></i></button>
+            </form>
+        </header>
+
+        {% if error_message %}
+            <div class="error-banner">{{ error_message }}</div>
+        {% endif %}
+
+        {% if weather_data %}
+        <main class="fade-in">
+            <div class="hero-section">
+                <div class="location-box">
+                    <h2>{{ weather_data.name }}, {{ weather_data.sys.country }}</h2>
+                    <span class="date-today" id="current-date"></span>
+                </div>
+                <div class="temp-container">
+                    <span class="temp-big">{{ weather_data.main.temp|round }}°</span>
+                    <p class="weather-desc">{{ weather_data.weather[0].description|capitalize }}</p>
+                </div>
+            </div>
+
+            <div class="metrics-row">
+                <div class="metric-item">
+                    <i data-lucide="droplets" class="icon-blue"></i>
+                    <div class="metric-info">
+                        <span>Humidity</span>
+                        <strong>{{ weather_data.main.humidity }}%</strong>
+                    </div>
+                </div>
+                <div class="metric-item">
+                    <i data-lucide="wind" class="icon-blue"></i>
+                    <div class="metric-info">
+                        <span>Wind</span>
+                        <strong>{{ weather_data.wind.speed }} m/s</strong>
+                    </div>
+                </div>
+            </div>
+        </main>
+        {% endif %}
+    </div>
+
+    <script>
+        lucide.createIcons();
+        const options = { weekday: 'long', month: 'long', day: 'numeric' };
+        document.getElementById('current-date').innerText = new Date().toLocaleDateString(undefined, options);
+    </script>
+</body>
+</html>
