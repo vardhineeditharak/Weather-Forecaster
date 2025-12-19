@@ -31,7 +31,7 @@ Built using **Python (Flask)** and a public weather API, this project focuses on
 
 - Python
 - Flask
-- HTML, CSS, JavaScript
+- HTML, CSS
 - Weather API
 
 ---
@@ -45,7 +45,7 @@ Weather-Forecaster/
 │ └── index.html
 ├── static/
   ├── css/
-  └── js/
+  └── style.css
 ```
 
 ---
