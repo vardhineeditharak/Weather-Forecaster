@@ -37,7 +37,7 @@ Built using **Python (Flask)** and a public weather API, this project focuses on
 ---
 
 ## Project Structure
-
+```bash
 Weather-Forecaster/
 ├── app.py
 ├── requirements.txt
@@ -49,6 +49,11 @@ Weather-Forecaster/
 
 ---
 
+## Live Demo
+https://weather-forecaster-y9pe.onrender.com
+
+---
+
 ## Setup (Local)
 
 ```bash
@@ -57,18 +62,11 @@ cd Weather-Forecaster
 pip install -r requirements.txt
 python app.py
 
-```Create a .env file:
+## Create a .env file:
 API_KEY=your_weather_api_key
 
-```Open
+## Open
 http://localhost:5000
-
----
 
 ## Deployment
 Deployed using Render with environment variables for API security.
-
----
-
-## Live Demo
-https://weather-forecaster-y9pe.onrender.com
