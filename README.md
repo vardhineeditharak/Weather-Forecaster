@@ -9,7 +9,10 @@ Built using **Python (Flask)** and a public weather API, this project focuses on
 ## Screenshots
 
 <p align="center">
-  <img src="sample-image-1.png" width="500">
+  <img src="sample-image-1.png" width="450">
+</p>
+
+<p align="center">
   <img src="sample-image-2.png" width="500">
 </p>
 
