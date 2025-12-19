@@ -8,8 +8,10 @@ Built using **Python (Flask)** and a public weather API, this project focuses on
 
 ## Screenshots
 
-![Home](sample-image-1.png)
-![Weather Result](sample-image-2.png)
+<p align="center">
+  <img src="sample-image-1.png" width="400">
+  <img src="sample-image-2.png" width="400">
+</p>
 
 ---
 
